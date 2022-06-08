@@ -9,7 +9,7 @@ class Page:
     def __eq__(self, p2):
         return self.title == p2.title
         
-class Queue:
+class Stack:
     def __init__(self, elements=[]):
         self.elements = elements
         
@@ -23,7 +23,7 @@ def main(start, end):
     base_URL = "https://en.wikipedia.org/wiki/"
     current = Page(start)
     solution = []
-    LIFO = Queue([current])
+    LIFO = Stack([current])
     while LIFO:
         P = LIFO.pop()
         URL = base_URL + P.title
